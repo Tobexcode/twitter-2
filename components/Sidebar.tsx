@@ -19,7 +19,7 @@ function Sidebar() {
     <div className="flex flex-col col-span-2 items-center px-4 md:items-start">
           <img
         className="m-3 h-10 w-10"
-        src="https://healthcaresuccess.com/wp-content/uploads/Twitter-logo.jpg"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/2491px-Twitter-logo.svg.png"
         alt="twitter"
       />
      <SidebarRow Icon={HomeIcon} title="Home" />
