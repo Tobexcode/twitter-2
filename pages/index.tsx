@@ -7,6 +7,7 @@ import Widget from '../components/Widget'
 import { fetchTweets } from '../utils/fetchTweets'
 import { Tweet } from '../typings'
 import { Toaster } from 'react-hot-toast'
+import { getSession } from 'next-auth/react'
 
 interface Props{
   tweets: Tweet[]
@@ -41,10 +42,12 @@ export default Home
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const tweets = await fetchTweets();
+  const session = await getSession(context);
 
   return{
     props: {
       tweets,
+      session
     }
   }
 }
